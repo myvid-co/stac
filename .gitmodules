@@ -1,0 +1,12 @@
+[submodule "internal-youtube-api"]
+	path = internal-youtube-api
+	url = git@github.com:easy-youtu/internal-youtube-api.git
+[submodule "website-api"]
+	path = website-api
+	url = git@github.com:easy-youtu/website-api.git
+[submodule "website-front"]
+	path = website-front
+	url = git@github.com:easy-youtu/website-front.git
+[submodule "converter-api"]
+	path = converter-api
+	url = git@github.com:easy-youtu/converter-api.git
