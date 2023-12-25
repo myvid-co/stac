@@ -10,3 +10,6 @@
 [submodule "converter-api"]
 	path = converter-api
 	url = git@github.com:easy-youtu/converter-api.git
+[submodule "processing-api"]
+	path = processing-api
+	url = git@github.com:easy-youtu/processing-api.git
