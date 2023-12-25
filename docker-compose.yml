@@ -15,7 +15,11 @@ services:
       APP_ENV: dev
       APP_KEY: base64:XfJMEWY4Y00O7TNw0oI9ND+1ijwiXu3r1m0NOZyJyp8=
       APP_DEBUG: true
+      APP_INTERNAL_YOUTUBE_API: 'http://node-internal-youtube-api:7777'
       APP_URL: http://localhost:8000
+      APP_STREAM_URL: https://frog.easy-youtu.be/wp-json/aio-dl/api
+      APP_STREAM_KEY: 0993b5c28a39ae4c46223225fb133c72921118fd9b7ee8f2bec6d8015a79388f
+      APP_ENCRYPT_DECRYPT_KEY: gdfgdf4g4fdg4fd44fs4e4zr4ezr44gvdgv4df4g4
       DB_CONNECTION: pgsql
       DB_HOST: db
       DB_PORT: 5432
@@ -27,7 +31,7 @@ services:
       - db
     networks: 
       - app_network
-  
+
   nginx-converter-api: 
     container_name: nginx-converter-api
     build: 
@@ -42,6 +46,16 @@ services:
     environment: 
       NGINX_FPM_HOST: php-converter-api
       NGINX_ROOT: /usr/src/app/public
+    networks: 
+      - app_network
+
+  node-internal-youtube-api: 
+    container_name: node-internal-youtube-api
+    build: 
+      context: ./internal-youtube-api
+      target: node-internal-youtube-api
+    ports: 
+      - 7777:7777
     networks: 
       - app_network
 
