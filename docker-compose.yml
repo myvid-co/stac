@@ -5,11 +5,11 @@ services:
     build: 
       context: ./converter-api
       target: php-converter-api
-    expose: 
-      - 9000
+    ports: 
+      - 8000:80
     volumes: 
-      - ./converter-api:/usr/src/app
-      - ./converter-api/public:/usr/src/app/public
+      - ./converter-api:/var/www/html
+      - ./converter-api/public:/var/www/html/public
     environment: 
       APP_NAME: Laravel
       APP_ENV: dev
@@ -27,23 +27,6 @@ services:
       QUEUE_CONNECTION: database
     depends_on: 
       - db
-    networks: 
-      - app_network
-
-  nginx-converter-api: 
-    container_name: nginx-converter-api
-    build: 
-      context: ./converter-api
-      target: nginx-converter-api
-    volumes: 
-      - ./converter-api/public:/usr/src/app/public
-    ports: 
-      - 8000:80
-    depends_on: 
-      - php-converter-api
-    environment: 
-      NGINX_FPM_HOST: php-converter-api
-      NGINX_ROOT: /usr/src/app/public
     networks: 
       - app_network
 
@@ -52,11 +35,11 @@ services:
     build: 
       context: ./processing-api
       target: php-processing-api
-    expose: 
-      - 9000
+    ports: 
+      - 9999:80
     volumes: 
-      - ./processing-api:/usr/src/app
-      - ./processing-api/public:/usr/src/app/public
+      - ./processing-api:/var/www/html
+      - ./processing-api/public:/var/www/html/public
     environment: 
       APP_NAME: Laravel
       APP_ENV: dev
@@ -74,23 +57,6 @@ services:
       QUEUE_CONNECTION: database
     depends_on: 
       - db
-    networks: 
-      - app_network
-
-  nginx-processing-api: 
-    container_name: nginx-processing-api
-    build: 
-      context: ./processing-api
-      target: nginx-processing-api
-    volumes: 
-      - ./processing-api/public:/usr/src/app/public
-    ports: 
-      - 9999:80
-    depends_on: 
-      - php-processing-api
-    environment: 
-      NGINX_FPM_HOST: php-processing-api
-      NGINX_ROOT: /usr/src/app/public
     networks: 
       - app_network
 
