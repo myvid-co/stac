@@ -41,7 +41,7 @@ services:
       - ./website-api:/var/www/html
       - ./website-api/public:/var/www/html/public
     environment: 
-      APP_NAME: Laravel
+      APP_NAME: Admin
       APP_ENV: dev
       APP_KEY: base64:XfJMEWY4Y00O7TNw0oI9ND+1ijwiXu3r1m0NOZyJyp8=
       APP_DEBUG: true
