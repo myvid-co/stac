@@ -58,6 +58,35 @@ services:
     networks: 
       - app_network
 
+
+  website-front: 
+    container_name: website-front
+    build: 
+      context: ./website-front
+      target: website-front
+    ports: 
+      - 3000:80
+    volumes: 
+      - ./website-front:/var/www/html
+      - ./website-front/public:/var/www/html/public
+    environment: 
+      APP_NAME: Easy Youtube
+      APP_ENV: dev
+      APP_KEY: base64:XfJMEWY4Y00O7TNw0oI9ND+1ijwiXu3r1m0NOZyJyp8=
+      APP_DEBUG: true
+      APP_URL: http://localhost:8000
+      DB_CONNECTION: pgsql
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_DATABASE: laravel
+      DB_USERNAME: postgres
+      DB_PASSWORD: postgres
+      QUEUE_CONNECTION: database
+    depends_on: 
+      - db
+    networks: 
+      - app_network
+
   php-processing-api: 
     container_name: php-processing-api
     build: 
