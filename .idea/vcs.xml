@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/converter-api" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/internal-youtube-api" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/processing-api" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/website-api" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/website-front" vcs="Git" />
+  </component>
+</project>
