@@ -472,6 +472,7 @@
       <path value="$PROJECT_DIR$/converter-api/vendor/psr/http-message" />
       <path value="$PROJECT_DIR$/converter-api/vendor/psr/http-factory" />
       <path value="$PROJECT_DIR$/converter-api/vendor/psr/http-client" />
+      <path value="$PROJECT_DIR$/website-api/vendor/spatie/laravel-translation-loader" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.1" />
