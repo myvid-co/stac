@@ -30,35 +30,6 @@ services:
     networks: 
       - app_network
 
-  website-api: 
-    container_name: website-api
-    build: 
-      context: ./website-api
-      target: website-api
-    ports: 
-      - 1111:80
-    volumes: 
-      - ./website-api:/var/www/html
-      - ./website-api/public:/var/www/html/public
-    environment: 
-      APP_NAME: Admin
-      APP_ENV: dev
-      APP_KEY: base64:XfJMEWY4Y00O7TNw0oI9ND+1ijwiXu3r1m0NOZyJyp8=
-      APP_DEBUG: true
-      APP_URL: http://localhost:8000
-      DB_CONNECTION: pgsql
-      DB_HOST: db
-      DB_PORT: 5432
-      DB_DATABASE: laravel
-      DB_USERNAME: postgres
-      DB_PASSWORD: postgres
-      QUEUE_CONNECTION: database
-    depends_on: 
-      - db
-    networks: 
-      - app_network
-
-
   website-front: 
     container_name: website-front
     build: 
@@ -76,11 +47,11 @@ services:
       APP_DEBUG: true
       APP_URL: http://localhost:8000
       DB_CONNECTION: pgsql
-      DB_HOST: db
+      DB_HOST: 161.97.67.144
       DB_PORT: 5432
-      DB_DATABASE: laravel
-      DB_USERNAME: postgres
-      DB_PASSWORD: postgres
+      DB_DATABASE: myvid
+      DB_USERNAME: myvid
+      DB_PASSWORD: WEuz7G8EUMlhF2Y
       QUEUE_CONNECTION: database
     depends_on: 
       - db
