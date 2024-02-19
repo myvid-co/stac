@@ -474,6 +474,7 @@
       <excludeFolder url="file://$MODULE_DIR$/website-front/vendor/voku/portable-ascii" />
       <excludeFolder url="file://$MODULE_DIR$/website-front/vendor/webmozart/assert" />
       <excludeFolder url="file://$MODULE_DIR$/website-api/vendor/spatie/laravel-translation-loader" />
+      <excludeFolder url="file://$MODULE_DIR$/website-front/vendor/spatie/laravel-translation-loader" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
