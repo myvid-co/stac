@@ -5,8 +5,8 @@
       <list>
         <option value="$PROJECT_DIR$/website-api/tests" />
         <option value="$PROJECT_DIR$/website-front/tests" />
-        <option value="$PROJECT_DIR$/processing-api/tests" />
         <option value="$PROJECT_DIR$/converter-api/tests" />
+        <option value="$PROJECT_DIR$/processing-api/tests" />
       </list>
     </option>
   </component>
