@@ -11,7 +11,7 @@ services:
       - ./converter-api:/var/www/html
       - ./converter-api/public:/var/www/html/public
     environment: 
-      APP_NAME: Laravel
+      APP_NAME: myVid
       APP_ENV: dev
       APP_KEY: base64:XfJMEWY4Y00O7TNw0oI9ND+1ijwiXu3r1m0NOZyJyp8=
       APP_DEBUG: true
@@ -41,7 +41,7 @@ services:
       - ./website-front:/var/www/html
       - ./website-front/public:/var/www/html/public
     environment: 
-      APP_NAME: Easy Youtube
+      APP_NAME: myVid
       APP_ENV: dev
       APP_KEY: base64:XfJMEWY4Y00O7TNw0oI9ND+1ijwiXu3r1m0NOZyJyp8=
       APP_DEBUG: true
@@ -69,7 +69,7 @@ services:
       - ./processing-api:/var/www/html
       - ./processing-api/public:/var/www/html/public
     environment: 
-      APP_NAME: Laravel
+      APP_NAME: myVid
       APP_ENV: dev
       APP_KEY: base64:XfJMEWY4Y00O7TNw0oI9ND+1ijwiXu3r1m0NOZyJyp8=
       APP_DEBUG: true
