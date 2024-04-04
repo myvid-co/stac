@@ -1,9 +1,6 @@
 [submodule "internal-youtube-api"]
 	path = internal-youtube-api
 	url = git@github.com:easy-youtu/internal-youtube-api.git
-[submodule "website-api"]
-	path = website-api
-	url = git@github.com:easy-youtu/website-api.git
 [submodule "website-front"]
 	path = website-front
 	url = git@github.com:easy-youtu/website-front.git
@@ -13,3 +10,6 @@
 [submodule "processing-api"]
 	path = processing-api
 	url = git@github.com:easy-youtu/processing-api.git
+[submodule "website-admin"]
+	path = website-admin
+	url = git@github.com:myvid-co/website-admin.git
