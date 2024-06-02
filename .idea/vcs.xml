@@ -5,6 +5,7 @@
     <mapping directory="$PROJECT_DIR$/converter-api" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/internal-youtube-api" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/processing-api" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/website-admin" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/website-front" vcs="Git" />
   </component>
 </project>
